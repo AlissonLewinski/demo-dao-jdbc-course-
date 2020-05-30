@@ -31,13 +31,14 @@ public class Program {
 		list.forEach(System.out::println);
 		
 		System.out.println("\n=== TEST 4: seller insert ===");
-		Seller newSeller = new Seller(null, "Chris", "chris@gmail.com", new Date(), 8000.0, department);
+		Seller newSeller = new Seller(null, "Julia Gata", "julia@gmail.com", new Date(), 8000.0, department);
 		sellerDao.insert(newSeller);
 		System.out.println("Inserted! New id = " + newSeller.getId());
 		
 		System.out.println("\n=== TEST 5: seller update ===");
-		seller = sellerDao.findById(1);
+		seller = sellerDao.findById(13);
 		seller.setName("Marcos Jeeves");
+		seller.setEmail("marcos@gmail.com");
 		sellerDao.update(seller);
 		System.out.println("Update completed");
 		
